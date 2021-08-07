@@ -261,7 +261,7 @@ UntarFileStream.prototype = {
 		var dataBeginPos = headerBeginPos + 512;
 
 		// Read header
-		file.name = stream.readString(100);
+		file.name = stream.readString(255);
 		file.mode = stream.readString(8);
 		file.uid = parseInt(stream.readString(8));
 		file.gid = parseInt(stream.readString(8));
